@@ -185,6 +185,18 @@
           .saturation(0.35)
           .effect("strength", 600, 0, 1)
       });
+    event
+      .create("astralfoods:missing_potion")
+      .displayName("missing.potion")
+	    .useAnimation("drink")
+      .food((food) => {
+        food
+          .hunger(3)
+          .saturation(0.2)
+          .effect("astraladditions:sink", 20, 0, 1)
+          .effect("wither", 180, 2, 1)
+		  .alwaysEdible();
+      });
   });
   onEvent("fluid.registry", (event) => {
     event
