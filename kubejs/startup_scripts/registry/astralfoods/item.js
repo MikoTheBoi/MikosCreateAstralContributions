@@ -193,7 +193,8 @@
         food
           .hunger(3)
           .saturation(0.2)
-          .effect("astraladditions:sink", 20, 0, 1)
+          //* I'd like to to change this to astraladditions:sink once it's stable enough - MikoBoi
+          .effect("createaddition:shocking", 40, 0, 1)
           .effect("wither", 180, 1, 1)
 		  .alwaysEdible();
       });
